@@ -79,6 +79,7 @@ export const actions = {
       dateOfBirth: String(data.get('dateOfBirth') || ''),
       email: String(data.get('email') || '').trim().toLowerCase(),
       phoneNumber: String(data.get('phoneNumber') || '').trim(),
+	  whatsappNumber: String(data.get('whatsappNumber') || '').trim(),
       currentAddress: String(data.get('currentAddress') || '').trim(),
       
       // Riwayat Pendidikan
@@ -148,6 +149,11 @@ export const actions = {
     if (!applicationData.phoneNumber || !phoneRegex.test(applicationData.phoneNumber.replace(/\s+/g, ''))) {
       errors.phoneNumber = 'Nomor telepon tidak valid (contoh: 08xxxxxxxxxx)';
     }
+
+	// Validasi Nomor WhatsApp
+	if (!applicationData.whatsappNumber || !phoneRegex.test(applicationData.whatsappNumber.replace(/\s+/g, ''))) {
+	  errors.whatsappNumber = 'Nomor WhatsApp tidak valid (contoh: 08xxxxxxxxxx)';
+	}
     
     if (!applicationData.currentAddress || applicationData.currentAddress.length < 10) {
       errors.currentAddress = 'Alamat harus diisi minimal 10 karakter';
@@ -374,6 +380,7 @@ export const actions = {
       dateOfBirth: applicationData.dateOfBirth,
       email: applicationData.email,
       phoneNumber: applicationData.phoneNumber,
+	  whatsappNumber: applicationData.whatsappNumber,
       currentAddress: applicationData.currentAddress,
       
       // Riwayat Pendidikan

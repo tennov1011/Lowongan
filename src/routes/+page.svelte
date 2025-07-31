@@ -1,49 +1,68 @@
-<div class="min-h-screen bg-slate-50 flex items-center justify-center px-6 py-12">
-	<div class="max-w-3xl w-full">
-		<div class="text-center mb-16">
-			<h1 class="text-5xl md:text-6xl font-extralight text-slate-900 mb-6 tracking-tight">
+<svelte:head>
+	<title>Portal Lowongan</title>
+</svelte:head>
+
+<div class="flex min-h-screen items-center justify-center bg-slate-50 px-6 py-12">
+	<div class="w-full max-w-3xl">
+		<div class="mb-16 text-center">
+			<h1 class="mb-6 text-5xl font-extralight tracking-tight text-slate-900 md:text-6xl">
 				Portal Lowongan Kerja
 			</h1>
-			<div class="w-24 h-0.5 bg-slate-900 mx-auto mb-8"></div>
-			<p class="text-lg text-slate-600 font-light leading-relaxed max-w-2xl mx-auto">
-				Selamat datang di sistem manajemen lowongan kerja yang sederhana dan efisien. 
-				Mulai perjalanan karir Anda bersama kami dengan proses yang mudah dan transparan.
+			<div class="mx-auto mb-8 h-0.5 w-24 bg-slate-900"></div>
+			<p class="mx-auto max-w-2xl text-lg leading-relaxed font-light text-slate-600">
+				Selamat datang di sistem manajemen lowongan kerja yang sederhana dan efisien. Mulai
+				perjalanan karir Anda bersama kami dengan proses yang mudah dan transparan.
 			</p>
 		</div>
 
 		<div class="space-y-8">
 			<!-- Main CTA -->
 			<div class="text-center">
-				<a 
-					href="/lowongan" 
-					class="inline-flex items-center px-8 py-4 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 transition-all duration-200 group"
+				<a
+					href="/lowongan"
+					class="group inline-flex items-center rounded-lg bg-slate-900 px-8 py-4 font-medium text-white transition-all duration-200 hover:bg-slate-800 focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:outline-none"
 				>
 					<span class="mr-3">📝</span>
-					Daftar Sebagai Pelamar
-					<svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					Daftar Sekarang
+					<svg
+						class="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"
+						></path>
 					</svg>
 				</a>
 			</div>
-			
+
 			<!-- Feature Card -->
-			<div class="flex justify-center mt-16">
+			<div class="mt-16 flex justify-center">
 				<div class="max-w-md">
-					<div class="bg-white rounded-xl border border-slate-200 p-8 hover:border-slate-300 transition-colors duration-200">
-						<div class="text-4xl mb-6 text-center">👥</div>
-						<h3 class="text-xl font-light text-slate-900 mb-4 text-center">Untuk Pelamar</h3>
-						<p class="text-slate-600 font-light leading-relaxed text-center">
-							Isi formulir lamaran kerja dengan mudah dan kirimkan aplikasi Anda langsung kepada tim rekrutmen
+					<div
+						class="rounded-xl border border-slate-200 bg-white p-8 transition-colors duration-200 hover:border-slate-300"
+					>
+						<div class="mb-6 text-center text-4xl">👥</div>
+						<h3 class="mb-4 text-center text-xl font-light text-slate-900">Untuk Anda</h3>
+						<p class="text-center leading-relaxed font-light text-slate-600">
+							Isi formulir lamaran kerja dengan mudah dan kirimkan aplikasi Anda langsung kepada tim
+							rekrutmen
 						</p>
 					</div>
 				</div>
 			</div>
 
 			<!-- Contact Info -->
-			<div class="text-center pt-12 border-t border-slate-200">
-				<p class="text-sm text-slate-500 font-light">
-					Butuh bantuan? Hubungi tim HR kami di 
-					<a href="mailto:hr@company.com" class="text-slate-700 hover:text-slate-900 font-medium transition-colors duration-200">hr@company.com</a>
+			<div class="border-t border-slate-200 pt-12 text-center">
+				<p class="text-sm font-light text-slate-500">
+					Butuh bantuan? Hubungi tim HR kami di
+					<a
+						href="https://wa.me/62881010095648"
+						target="_blank"
+						rel="noopener"
+						class="font-medium text-slate-700 transition-colors duration-200 hover:text-slate-900"
+						>Chat HR: 0881-0100-95648</a
+					>
 				</p>
 			</div>
 		</div>

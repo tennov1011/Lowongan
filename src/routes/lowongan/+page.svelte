@@ -24,6 +24,7 @@
 	let dateOfBirth = '';
 	let email = '';
 	let phoneNumber = '';
+	let whatsappNumber = '';
 	let currentAddress = '';
 
 	// Form fields - Riwayat Pendidikan
@@ -124,6 +125,7 @@
 		dateOfBirth = form.values.dateOfBirth || '';
 		email = form.values.email || '';
 		phoneNumber = form.values.phoneNumber || '';
+		whatsappNumber = form.values.whatsappNumber || '';
 		currentAddress = form.values.currentAddress || '';
 		highestEducation = form.values.highestEducation || '';
 		institutionName = form.values.institutionName || '';
@@ -154,6 +156,7 @@
 		dateOfBirth = '';
 		email = '';
 		phoneNumber = '';
+		whatsappNumber = '';
 		currentAddress = '';
 		highestEducation = '';
 		institutionName = '';
@@ -394,6 +397,25 @@
 							/>
 							{#if form?.errors?.phoneNumber}
 								<p class="mt-2 text-sm text-rose-600">{form.errors.phoneNumber}</p>
+							{/if}
+						</div>
+
+						<!-- Nomor Whatsapp -->
+						<div>
+							<label for="whatsappNumber" class="block text-sm font-medium text-slate-700 mb-3">
+								No WhatsApp <span class="text-rose-500">*</span>
+							</label>
+							<input
+								id="whatsappNumber"
+								name="whatsappNumber"
+								type="tel"
+								bind:value={whatsappNumber}
+								required
+								class="w-full px-4 py-3 border border-slate-200 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:border-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-400 transition-colors"
+								placeholder="08xxxxxxxxxx"
+							/>
+							{#if form?.errors?.whatsappNumber}
+								<p class="mt-2 text-sm text-rose-600">{form.errors.whatsappNumber}</p>
 							{/if}
 						</div>
 
